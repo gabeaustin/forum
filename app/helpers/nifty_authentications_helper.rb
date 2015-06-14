@@ -1,0 +1,2 @@
+module NiftyAuthenticationsHelper
+end

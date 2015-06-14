@@ -1,0 +1,2 @@
+module MyForumsHelper
+end

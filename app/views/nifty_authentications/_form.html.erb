@@ -1,0 +1,17 @@
+<%= form_for(@nifty_authentication) do |f| %>
+  <% if @nifty_authentication.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nifty_authentication.errors.count, "error") %> prohibited this nifty_authentication from being saved:</h2>
+
+      <ul>
+      <% @nifty_authentication.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module NiftyScaffoldsHelper
+end

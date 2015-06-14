@@ -1,0 +1,29 @@
+<h1>Listing nifty_scaffolds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Forum</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nifty_scaffolds.each do |nifty_scaffold| %>
+      <tr>
+        <td><%= nifty_scaffold.forum %></td>
+        <td><%= nifty_scaffold.name %></td>
+        <td><%= nifty_scaffold.description %></td>
+        <td><%= link_to 'Show', nifty_scaffold %></td>
+        <td><%= link_to 'Edit', edit_nifty_scaffold_path(nifty_scaffold) %></td>
+        <td><%= link_to 'Destroy', nifty_scaffold, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nifty scaffold', new_nifty_scaffold_path %>

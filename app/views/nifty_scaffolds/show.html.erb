@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Forum:</strong>
+  <%= @nifty_scaffold.forum %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @nifty_scaffold.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @nifty_scaffold.description %>
+</p>
+
+<%= link_to 'Edit', edit_nifty_scaffold_path(@nifty_scaffold) %> |
+<%= link_to 'Back', nifty_scaffolds_path %>
