@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150614201035) do
+ActiveRecord::Schema.define(version: 20150614202516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "layouts", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "my_forums", force: true do |t|
     t.string   "name"
@@ -27,6 +32,7 @@ ActiveRecord::Schema.define(version: 20150614201035) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "topic_id"
   end
 
   create_table "topics", force: true do |t|
@@ -35,6 +41,7 @@ ActiveRecord::Schema.define(version: 20150614201035) do
     t.datetime "last_post_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "forum_id"
   end
 
   create_table "users", force: true do |t|
